@@ -10,11 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var lblcheck: UILabel!
+    @IBOutlet weak var txtpassworf: UITextField!
+    @IBOutlet weak var txtUserName: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func btnLogin(_ sender: Any) {
+        
+        if ( txtUserName.text == "admin" && txtpassworf.text == "admin")
+        {
+        lblcheck.text = "Correct username and password"
+        }
+    }
+    
 }
 
